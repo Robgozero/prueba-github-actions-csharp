@@ -19,5 +19,8 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Compilar programa
-        run: dotnet build
+      - name: Compilar
+        run: dotnet build Prueba.csproj
+
+      - name: Ejecutar programa
+        run: dotnet run --project Prueba.csproj
