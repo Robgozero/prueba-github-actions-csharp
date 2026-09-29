@@ -1,0 +1,23 @@
+name: Prueba C#
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  prueba:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Instalar .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Compilar programa
+        run: dotnet build
